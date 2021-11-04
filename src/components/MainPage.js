@@ -16,8 +16,7 @@ const MainPage = (props) => {
 
     const handleLogout = () =>{
         fire.auth().signOut();
-        console.log("uhsuh")
-        history.push("/login")
+        history.push("/")
     }
 
     

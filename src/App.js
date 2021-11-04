@@ -11,7 +11,7 @@ function App() {
     <Router className="body">
     <div className="App">
       <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Login />
           </Route>
           <Route path="/anime/:id">

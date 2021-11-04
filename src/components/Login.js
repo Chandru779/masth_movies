@@ -78,7 +78,7 @@ import spider from '../images/spiderMan.png'
     },[])
    
     useEffect(()=>{
-      if(user) window.location.replace("/");
+      if(user) window.location.replace("/mainpage");
   },[user])
 
     return (
@@ -90,7 +90,6 @@ import spider from '../images/spiderMan.png'
                   <h1 className="form_header">Welcome</h1>
                   {hasAccount ? (
                      <>
-
                      {/* login form */}
                   <h2 className="login">Login</h2>
                   <label className="usermail">UserMail</label>

@@ -1,8 +1,11 @@
 import React, { useState,useEffect } from 'react'
+import fire from '../fire';
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams,useHistory } from 'react-router-dom'
 
  const AnimePage = () => {
+
+    let history = useHistory();
 
     const{id} = useParams()
     const[animeData, setAnimeData] = useState(null);
@@ -10,8 +13,7 @@ import { Link, useParams } from 'react-router-dom'
 
     const handleLogout = () =>{
         fire.auth().signOut();
-        console.log("uhsuh")
-        history.push("/login")
+        history.push("/")
     }
 
     useEffect(()=>{
