@@ -11,13 +11,13 @@ function App() {
     <Router className="body">
     <div className="App">
       <Switch>
-          <Route path="/login">
+          <Route path="/">
             <Login />
           </Route>
           <Route path="/anime/:id">
             <AnimePage />
           </Route>
-          <Route path="/">
+          <Route path="/mainpage">
             <MainPage />
           </Route>
         </Switch>
