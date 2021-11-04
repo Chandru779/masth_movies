@@ -8,6 +8,12 @@ import { Link, useParams } from 'react-router-dom'
     const[animeData, setAnimeData] = useState(null);
     const[review ,setReview] = useState("");
 
+    const handleLogout = () =>{
+        fire.auth().signOut();
+        console.log("uhsuh")
+        history.push("/login")
+    }
+
     useEffect(()=>{
         if(id){
             axios.get(`https://api.aniapi.com/v1/anime/${id}`, {
@@ -38,7 +44,7 @@ import { Link, useParams } from 'react-router-dom'
          <div >
               <ul className="navbar">
                 <li className="project_title">Anime Shows</li>
-                <li ><button className="signout_btn" >Sign out</button></li>
+                <li ><button className="signout_btn" onClick={handleLogout}>Sign out</button></li>
             </ul>
              {
                 animeData ? <div >
