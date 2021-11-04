@@ -1,0 +1,422 @@
+/* this is for Signup and login */
+
+.spider_img{
+   position: fixed;
+   top: 0;
+   right: 0;
+   margin-top: 70px;
+   margin-left: 1000px;
+   padding: 0;
+  
+}
+.form_container{
+    background-color: whitesmoke;
+    width: 400px;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left:30%;
+    border: 3px solid blue;
+    border-radius: 20px;
+   
+}
+.form_header{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    border-bottom: 3px solid rgba(211, 69, 69, 0.801);
+    width: 150px;
+   
+}
+
+
+.login{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    border-radius:10px ;
+    color: white;
+    width: 100px;
+    margin: auto;
+    margin-top: 25px;
+}
+.signup{
+    text-align: center;
+    font-size: 18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    background-color: black;
+    border-radius:10px ;
+    color: white;
+    width: 100px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.mail_error{
+    font-size: 12px;
+    color: red;
+    margin-top: 0px;
+    margin-bottom: -12px;
+    margin-left: 40px;
+}
+
+.password_error{
+    font-size: 12px;
+    color: red;
+    margin-top: 0px;
+    margin-bottom: -12px;
+    margin-left: 40px;
+}
+
+/* design inputs and labels */
+.userName{
+    margin-top: 20px;
+    margin-left: 40px;
+    display: block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 530;
+   
+}
+.usermail{
+    margin-top: 20px;
+    margin-left: 40px;
+    display: block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 530;
+    
+}
+.password{
+    margin-top: 20px;
+    margin-left: 40px;
+    display: block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 530;
+}
+
+.input{
+    margin-left: 40px;
+    width: 230px;
+    height: 25px;
+    border: 1px solid rgba(50, 50, 211, 0.678);
+    border-radius: 10px;
+}
+
+.btn{
+    width:320px;
+    height:30px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(207, 49, 49);
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+.toggle-msg{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+
+}
+
+.toggle{
+    color: blue;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+/* Next design is for MainPage */
+
+.Mainpage{
+    /* background-color: white; */
+    height: 660px;
+    margin: 0;
+    padding: 0;
+}
+
+.item_header{
+    font-size: 17px;
+
+}
+
+.signout_btn{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    bottom: 57px;
+    left: 1230px;
+    background-color: rgb(204, 201, 14);
+    color:white;
+    border: none;
+    border-radius: 10px;
+    
+}
+.searchbar{
+    width: 300px;
+    height: 30px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    font-size: medium;
+    padding-left: 2px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgray;
+    display:block;
+}
+
+.seach_guide{
+     text-align: center;
+     font-size: 30px;
+     color: gray;
+}
+
+.search_img{
+   margin-left: 450px;
+   border-radius: 60px;
+}
+
+/* Making one navbar */
+.navbar{
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(114, 103, 87);
+    display: inline-block;
+}
+
+.navbar li{
+    padding: 10px;
+}
+
+.project_title{
+    font-size: 28px;
+    color: white;
+
+}
+
+.project_title:first-letter{
+    color:rgb(236, 223, 31);
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Next design is for Anime Page */
+/* Rendering each item  */
+.eachItem{
+      width: 400px;
+      display: inline-block;
+      margin-left: 25px;
+      margin-top: 25px;
+      padding: 10px;
+      background: lightgray;
+      border-radius: 10px;
+      box-shadow: 1px 2px 3px gray;
+      color: black;
+      display: inline-block;
+      grid-auto-flow: row;
+      
+}
+
+.item_img{
+    margin-left: 40px;
+    border-radius: 15px;
+}
+
+
+/* Detailed explaination of each item */
+
+
+
+
+
+.cover-img{
+    margin-left: 150px; 
+    margin-top: -100px;
+    border: 2px solid rgb(114, 110, 110);
+    border-radius:30px 30px 0px 0px;  
+    
+ }
+
+.anime_title{
+   font-size: 22px;
+   color: rgb(201, 16, 16);
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   display: inline-block;
+   position:relative;
+   top: -160px;
+   
+   
+}
+.anime_desc{
+    font-size: 15px;
+}
+.trailer_btn{
+    width: 250px;
+    cursor: pointer;
+    height: 35px;
+   position: relative;
+   top: 18px;
+   left: -252px;
+   border: none;    
+   border-radius:0px 0px 10px 10px;
+   background-color: rgb(240, 71, 71);
+   
+}
+
+.link{
+    color: whitesmoke;
+    font-size: 15px;
+    text-decoration: none;
+}
+.anime_genres{  
+    padding: 10px;
+    width: 700px;
+    margin-left: 450px;
+    margin-top: -120px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 150px;
+    
+    background-color: rgba(255, 255, 255, 0.885);
+    overflow: hidden;
+}
+
+.genre_head{
+     margin-top:-10px;
+     margin-bottom: 10px;
+     padding: 0;
+}
+
+.each_genre{
+    width: 120px;
+    display: inline-block;
+    float: left ;
+    margin-top: -10px;
+    margin-left: 4px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align:center ;
+    text-shadow: 1px 2px 3px gray;
+    background-color: rgb(58, 154, 233);
+    color: white;
+
+}
+
+.full_details{
+    width: 700px;
+    height: auto;
+    background-color: rgba(250, 249, 249, 0.912);
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: auto;
+    margin-left: 450px;
+    padding: 10px;
+}
+
+.date{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+.season{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+
+.season_year{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+
+.episode_count{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+.episode_duration{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+
+.descriptions{
+    width: 350px;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+
+.score{
+    width: 350px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(226, 39, 39, 0.837);
+}
+
+span{
+    color: rgba(221, 218, 218, 0.809);
+    font-size: 20px;
+}
+
+.rating{
+    font-size: 25px;
+    color:rgb(206, 215, 223);
+}
+
+.review{
+    width: 250px;
+    height: 500px;
+    background-color: white;
+    height: 0;
+    margin-top:-570px ;
+    margin-left:150px ;
+
+}
+
+.review_btn{
+    width: 200px;
+    height: 30px;
+    margin-left:25px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 153, 255, 0.85);
+    color: white;
+}
+
+ .textarea{
+    width: 250px;
+    height: 100px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 10px;
+}

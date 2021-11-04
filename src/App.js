@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/style.css';
+import './components/spinner.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Login from './components/Login';
+import MainPage from './components/MainPage';
+import AnimePage from './components/AnimePage';
+
 
 function App() {
   return (
+    <Router className="body">
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/anime/:id">
+            <AnimePage />
+          </Route>
+          <Route path="/">
+            <MainPage />
+          </Route>
+        </Switch>
     </div>
+    </Router>
   );
 }
 
