@@ -54,8 +54,8 @@ const MainPage = () => {
           <div className="w-[90%] lg:w-1/4 h-[70%] m-auto text-dark bg-white rounded-3xl">
               <div className="h-full flex flex-col font-inter items-center justify-center gap-4 p-4 sm:p-12 text-center">
                 <img src="/projects/EmptyState.png" width="300"  className="object-cover"/>
-                <p className="text-2xl font-semibold">No Data found</p>
-                <p className="text-lg font-medium">Please search other movies or refresh for latest movies</p>
+                <p className="text-2xl font-semibold">Sorry, couldn't find data</p>
+                <p className="text-lg font-medium">please provide other movie name or refresh for top movies</p>
                 <button className="w-1/2 p-2 bg-dark text-light rounded-lg font-semibold" onClick={()=>navigate(`/mainpage?search=`)}>Refresh</button>
               </div>
           </div>
