@@ -17,7 +17,7 @@ export const Header = ({searchTab}) => {
         <p className="hidden sm:block border border-grey sm:border-0 font-inter font-extrabold text-light sm:text-2xl px-3 py-1 ">
           Masth Movies
         </p>
-        <img title="Masth movies" src="/brand/apple-touch-icon.png" width="45px" className=" sm:hidden border-2 border-primary rounded-full p-1" />
+        <img title="Masth movies" src="/brand/apple-touch-icon.png" width="40px" className=" sm:hidden border-2 border-primary rounded-full p-1" />
       </Link>
       {searchTab ? 
       <div
