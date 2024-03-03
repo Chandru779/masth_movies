@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useSearchParams,useNavigate } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Header } from "./Header";
 import { getMovies } from "../helpers";
 import { FaStar, FaEye } from "react-icons/fa";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import appConfig from "../configs";
 
 const MainPage = () => {
@@ -12,7 +14,7 @@ const MainPage = () => {
   const navigate = useNavigate();
   const [searchedTerm, setSearchedTerm] = useState(searchParams.get("search"));
   const [movieDetails, setMovieDetails] = useState({
-    status: "nodata",
+    status: "loading",
     result: [],
   });
 
@@ -44,20 +46,37 @@ const MainPage = () => {
     <div className="flex flex-col gap-2 bg-gradient-to-br from-dark to-secondary h-screen">
       <Header searchTab={true} />
       <div className="h-full w-full flex flex-col gap-2 grow overflow-y-auto">
+        {console.log("INITIALLY", movieDetails.status)}
         {movieDetails.status == "loading" ? (
           <div className="w-full h-full flex">
             <img className="w-1/6 m-auto" src="/projects/loader.svg" />
           </div>
         ) : movieDetails.status == "error" ? (
-          <div className="text-primary">Failed Fetching Data</div>
+          <div className="text-primary text-2xl font-semibold p-8 ">
+            Sorry &#128542; failed to fetch Data, Facing some technical Issue
+            !..
+          </div>
         ) : movieDetails.status == "nodata" ? (
           <div className="w-[90%] lg:w-1/4 h-[70%] m-auto text-dark bg-white rounded-3xl">
-              <div className="h-full flex flex-col font-inter items-center justify-center gap-4 p-4 sm:p-12 text-center">
-                <img src="/projects/EmptyState.png" width="300"  className="object-cover"/>
-                <p className="text-2xl font-semibold">Sorry, couldn't find data</p>
-                <p className="text-lg font-medium">please provide other movie name or refresh for top movies</p>
-                <button className="w-1/2 p-2 bg-dark text-light rounded-lg font-semibold" onClick={()=>navigate(`/mainpage?search=`)}>Refresh</button>
-              </div>
+            <div className="h-full flex flex-col font-inter items-center justify-center gap-4 p-4 sm:p-12 text-center">
+              <img
+                src="/projects/EmptyState.png"
+                width="300"
+                className="object-cover"
+              />
+              <p className="text-2xl font-semibold">
+                Sorry, couldn't find data
+              </p>
+              <p className="text-lg font-medium">
+                please provide other movie name or refresh for top movies
+              </p>
+              <button
+                className="w-1/2 p-2 bg-dark text-light rounded-lg font-semibold"
+                onClick={() => navigate(`/mainpage?search=`)}
+              >
+                Refresh
+              </button>
+            </div>
           </div>
         ) : (
           <div className="px-[5%] py-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
@@ -70,9 +89,17 @@ const MainPage = () => {
                   >
                     <div className="w-full overflow-hidden rounded-lg flex flex-col bg-white/10 text-light group">
                       <div className=" w-full overflow-hidden ">
-                        <img
+                        {/* <img
                           className="mx-auto h-auto group-hover:scale-110 transition-all duration-200 ease-in"
                           src={appConfig.img_path + movie?.poster_path}
+                        /> */}
+                        <LazyLoadImage
+                          alt={movie?.poster_path}
+                          src={appConfig.img_path + movie?.poster_path} // use normal <img> attributes as props
+                          width='auto'
+                          height='auto'
+                          effect="blur"
+                          className="mx-auto h-auto group-hover:scale-90 transition-all duration-200 ease-in"
                         />
                       </div>
                       <div className="px-2 pb-2 pt-3 shrink-0">

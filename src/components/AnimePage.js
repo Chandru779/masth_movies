@@ -7,6 +7,8 @@ import { Header } from "./Header";
 import YouTube from "react-youtube";
 import appConfig from "../configs";
 import { CiCalendarDate, CiTimer } from "react-icons/ci";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AnimePage = () => {
   const { id } = useParams();
@@ -54,16 +56,32 @@ const AnimePage = () => {
       <div className="h-full w-full overflow-y-auto">
         {movieData.result ? (
           <>
+           {/* <LazyLoadImage
+                          alt={movieData?.backdrop_path}
+                          src={appConfig.img_path + movieData.result?.backdrop_path}
+                          effect="blur"
+                          width="100%"
+                          className="w-[100%] h-[200px] sm:h-[300px] md:h-[500px] object-cover"
+                        /> */}
             <img
               className="w-[100%] h-[200px] sm:h-[300px] md:h-[500px] object-cover"
               src={appConfig.img_path + movieData.result?.backdrop_path}
             />
             <div className="flex gap-10">
-              <img
+              {/* <img
                 src={appConfig.img_path + movieData.result?.poster_path}
                 width="250px"
-                className="-mt-20 ml-[5%] rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] hidden md:block"
-              />
+                className="-mt-20 ml-[5%] rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] hidden md:block z-50"
+              /> */}
+              <div className="-mt-20 ml-[5%] ">
+               <LazyLoadImage
+                          alt={movieData.result?.poster_path}
+                          src={appConfig.img_path + movieData.result?.poster_path}
+                          effect="blur"
+                          width="250px"
+                          className="rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] hidden md:block z-50"
+                        />
+                        </div>
               <div className="flex flex-col px-2 gap-2">
                 <h2 className="text-primary text-3xl sm:text-4xl md:text-6xl font-inter font-bold py-2 bg-gradient-to-b from-light to-grey bg-clip-text text-transparent">
                   {movieData.result?.title}
@@ -187,14 +205,16 @@ const AnimePage = () => {
                 {movieData.result?.credits?.cast?.map((cast) => {
                   return (
                     cast.profile_path && (
-                      <div className="flex flex-col bg-light text-secondary">
-                        <div className="flex w-[180px] h-[200px] ">
-                          <img src={appConfig.img_path + cast.profile_path}  className="object-cover"/>
+                      <div className="flex flex-col bg-light text-secondary rounded-lg w-[200px] ">
+                        <div className="flex w-[200px] h-[200px] ">
+                          <img src={appConfig.img_path + cast.profile_path} width="100%" height="100%"  className="object-cover"/>
                         </div>
+                        <div>
                         <p className="px-2 py-1 text-lg font-semibold ">
                           {cast.name}
                         </p>
                         <p className="px-2 text-sm">{cast.character}</p>
+                        </div>
                       </div>
                     )
                   );

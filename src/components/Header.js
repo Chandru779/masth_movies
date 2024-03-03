@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
-import { IoSearch,IoChevronBackOutline  } from "react-icons/io5";
+import { IoSearch  } from "react-icons/io5";
+import { TiArrowBackOutline } from "react-icons/ti";
+
 
 export const Header = ({searchTab}) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -10,7 +12,7 @@ export const Header = ({searchTab}) => {
   }
 
   return (
-    <header className="text-light py-3 px-[2%] tracking-wider flex justify-between">
+    <header className="text-light py-3 px-[2%] tracking-wider flex justify-between items-center">
       <Link to="/">
         <p className="hidden sm:block border border-grey sm:border-0 font-inter font-extrabold text-light sm:text-2xl px-3 py-1 ">
           Masth Movies
@@ -39,11 +41,11 @@ export const Header = ({searchTab}) => {
         />
       </div>
       :
-      <div className="font-inter cursor-pointer flex gap-2 items-center border border-primary px-3 rounded-lg" onClick={()=>navigate(-1)}>
-        <IoChevronBackOutline
+      <div className="font-inter cursor-pointer flex gap-2 items-center border border-secondary bg-secondary px-3 rounded-lg h-[30px]" onClick={()=>navigate(-1)}>
+        <TiArrowBackOutline 
           className="h-5 w-5"
         />
-        <button>previous</button>  
+        <button>Back</button>  
       </div>}
     </header>
   );

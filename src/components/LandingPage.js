@@ -2,6 +2,8 @@ import { FaRocket } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Header } from "./Header";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LandingPage = () => {
   return (
@@ -30,13 +32,22 @@ const LandingPage = () => {
         </div>
 
         <div className="md:hidden block lg:block h-full w-full lg:w-1/2 self-end">
-          <motion.img
+          {/* <motion.img
             initial={{ scale: 1 }}
             whileHover={{
               scale: 0.95,
             }}
             transition={{ duration: 0.5 }}
             className="h-full w-full"
+            src="/projects/spiderMan.png"
+          /> */}
+
+          <LazyLoadImage
+            alt='spiderman'
+            width="auto"
+            height="auto"
+            effect="blur"
+            className="h-full w-full hover:scale-110 transition-all duration-200 ease-in"
             src="/projects/spiderMan.png"
           />
         </div>
