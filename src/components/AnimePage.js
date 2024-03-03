@@ -73,13 +73,13 @@ const AnimePage = () => {
                 width="250px"
                 className="-mt-20 ml-[5%] rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] hidden md:block z-50"
               /> */}
-              <div className="-mt-20 ml-[5%] ">
+              <div className="-mt-20 ml-[5%] hidden md:block z-50">
                <LazyLoadImage
                           alt={movieData.result?.poster_path}
                           src={appConfig.img_path + movieData.result?.poster_path}
                           effect="blur"
                           width="250px"
-                          className="rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] hidden md:block z-50"
+                          className="rounded-md shadow-[-2px_2px_6px_0px] shadow-grey/70 h-[400px] "
                         />
                         </div>
               <div className="flex flex-col px-2 gap-2">
