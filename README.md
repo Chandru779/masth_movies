@@ -12,3 +12,6 @@ start project by npm start
 This project is developed using react , tailwind css , framer motion and using imdb api for movies related data
 
 
+## CheckList
+- [ ] Image scaling using tailwind
+- [ ] Mobile Input , text change
